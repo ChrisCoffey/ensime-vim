@@ -119,7 +119,7 @@ class EnsimeClient(object):
             tm = now.strftime("%Y-%m-%d %H:%M:%S.%f")
             f.write("{}: {}\n".format(tm, what))
 
-    def queue_poll(self, sleep_t=0.5):
+    def queue_poll(self, sleep_t=0.1):
         """Put new messages on the queue as they arrive. Blocking in a thread.
 
         Value of sleep is low to improve responsiveness.
